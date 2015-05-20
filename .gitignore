@@ -3,3 +3,8 @@ packages
 *.suo
 *.user
 *.vspscc
+bin
+obj
+Debug
+*.opensdf
+*.sdf

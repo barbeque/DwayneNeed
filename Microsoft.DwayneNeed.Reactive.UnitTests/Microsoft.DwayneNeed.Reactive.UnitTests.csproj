@@ -86,7 +86,7 @@
     </ProjectReference>
     <ProjectReference Include="..\Microsoft.DwayneNeed.Reactive\Microsoft.DwayneNeed.Reactive.csproj">
       <Project>{19c705ad-c49f-4dba-8ae0-081e70f0c6b2}</Project>
-      <Name>Microsoft.DwayneNeed.Reactive %28Microsoft.DwayneNeed.Reactive\Microsoft.DwayneNeed.Reactive%29</Name>
+      <Name>Microsoft.DwayneNeed.Reactive</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
