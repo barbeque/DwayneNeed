@@ -255,9 +255,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Microsoft.DwayneNeed.Win32\Microsoft.DwayneNeed.Win32.csproj">
       <Project>{39337e67-fdbb-4b17-ab5f-b65820ccd11e}</Project>
       <Name>Microsoft.DwayneNeed.Win32</Name>

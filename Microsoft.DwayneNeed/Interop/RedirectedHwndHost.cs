@@ -447,6 +447,8 @@ namespace Microsoft.DwayneNeed.Interop
             HwndSource currentHwndSource = CurrentHwndSource;
             if (currentHwndSource != null)
             {
+                var dpiScaleToWpfScale = CurrentHwndSource.CompositionTarget.TransformToDevice; // New!
+
                 HWND hwndCapture = NativeMethods.GetCapture();
                 if (hwndCapture != HWND.NULL)
                 {
@@ -461,6 +463,7 @@ namespace Microsoft.DwayneNeed.Interop
                         pt = currentHwndSource.TransformScreenToClient(pt);
                         pt = currentHwndSource.TransformClientToRoot(pt);
                         pt = currentHwndSource.RootVisual.TransformToDescendant(this).Transform(pt);
+                        pt = dpiScaleToWpfScale.Transform(pt); // New!
 
                         ptClient = new POINT { x = (int)Math.Round(pt.X), y = (int)Math.Round(pt.Y) };
                     }
@@ -482,6 +485,7 @@ namespace Microsoft.DwayneNeed.Interop
                         // RedirectedHwndHost element.
                         var xfrm = currentHwndSource.RootVisual.TransformToDescendant(hit);
                         pt = xfrm.Transform(pt);
+                        pt = dpiScaleToWpfScale.Transform(pt); // New!
                         ptClient = new POINT { x = (int)Math.Round(pt.X), y = (int)Math.Round(pt.Y) };
                     }
                 }
